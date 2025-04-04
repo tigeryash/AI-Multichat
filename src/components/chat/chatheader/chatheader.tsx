@@ -1,9 +1,11 @@
 import React from "react";
+import AISelelectMenu from "./aiselelectmenu";
+import ChatOptions from "./chatoptions";
 
 const Chatheader = () => {
   return (
     <div>
-      <AISelectMenu />
+      <AISelelectMenu />
       <ChatOptions />
     </div>
   );
