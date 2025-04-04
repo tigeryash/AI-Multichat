@@ -1,7 +1,11 @@
 import React from "react";
 
 const Chatlist = () => {
-  return <aside></aside>;
+  return <aside>
+    <NewChatButton />
+
+    <
+  </aside>;
 };
 
 export default Chatlist;

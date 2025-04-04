@@ -1,7 +1,14 @@
-import React from "react";
+import { Button } from "@/components/ui/button";
+import { Plus } from "lucide-react";
 
 const AddChatWindow = () => {
-  return <div>AddChatWindow</div>;
+  return (
+    <div>
+      <Button>
+        <Plus />
+      </Button>
+    </div>
+  );
 };
 
 export default AddChatWindow;

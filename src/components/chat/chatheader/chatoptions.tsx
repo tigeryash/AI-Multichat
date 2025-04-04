@@ -6,7 +6,7 @@ import ChatPlacement from "./chatoptions/chatplacement";
 
 const ChatOptions = () => {
   return (
-    <div>
+    <div className="flex items-center gap-2">
       <SyncChatButton />
       <ConfigureModel />
       <AddChatWindow />
