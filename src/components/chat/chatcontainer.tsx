@@ -3,7 +3,7 @@ import ChatWindow from "./chatwindow";
 
 const ChatContainer = () => {
   return (
-    <div>
+    <div className="flex flex-col h-screen w-full bg-gray-100 p-4">
       <ChatWindow />
     </div>
   );

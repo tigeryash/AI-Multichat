@@ -5,9 +5,9 @@ import { Button } from "@/components/ui/button";
 const SyncChatButton = () => {
   return (
     <div className="flex items-center gap-2">
-      <p className="rounded-lg bg-gray-200">Synced</p>
+      <p className="rounded-lg py-1 px-2 bg-gray-200">Synced</p>
       <Button>
-        <ToggleRight />
+        {Math.random() * 10 > 1 ? <ToggleRight /> : <ToggleLeft />}
       </Button>
     </div>
   );
