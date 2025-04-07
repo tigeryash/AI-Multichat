@@ -1,8 +1,7 @@
-import React from "react";
-import SyncChatButton from "./chatoptions/syncchatbutton";
-import ConfigureModel from "./chatoptions/configuremodel";
-import AddChatWindow from "./chatoptions/addchatwindow";
-import ChatPlacement from "./chatoptions/chatplacement";
+import SyncChatButton from "./chatoptions/sync-chat-button";
+import ConfigureModel from "./chatoptions/configure-model";
+import AddChatWindow from "./chatoptions/add-chat-window";
+import ChatPlacement from "./chatoptions/chat-placement";
 
 const ChatOptions = () => {
   return (

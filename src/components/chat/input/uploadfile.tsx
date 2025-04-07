@@ -4,8 +4,10 @@ import React from "react";
 
 const UploadFile = ({
   setImage,
+  getBase64,
 }: {
   setImage: (file: File | null) => void;
+  getBase64: (file: File) => void;
 }) => {
   return (
     <button className=" flex items-center justify-center  relative">
@@ -19,6 +21,7 @@ const UploadFile = ({
           if (file) {
             console.log(file);
             setImage(file);
+            getBase64(file);
           }
         }}
       />
