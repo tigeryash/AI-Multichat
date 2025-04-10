@@ -11,7 +11,7 @@ const PromptInput = () => {
 
     // Reset height to auto to get the correct scrollHeight
     textarea.style.height = "0px";
-    const newHeight = Math.min(textarea.scrollHeight + 6, 150); // 288px = 72 * 4 (approx max-h-72)
+    const newHeight = Math.min(textarea.scrollHeight, 150); // 288px = 72 * 4 (approx max-h-72)
     textarea.style.height = `${newHeight}px`;
   };
 
@@ -34,8 +34,8 @@ const PromptInput = () => {
       ref={textareaRef}
       rows={1}
       placeholder="Type your message here..."
-      className="rounded-lg p-2 w-full border-2 border-gray-300 focus:outline-none
-   focus:border-blue-500 overflow-y-auto resize-none max-h-[150px] box-border"
+      className="rounded-lg p-2 w-full  focus:outline-none
+   focus:ring-1 focus:ring-gray-500/65 overflow-y-auto resize-none max-h-[150px] box-border "
       onKeyDown={(e) => {
         if (e.key === "Enter" && !e.shiftKey) {
           e.preventDefault();

@@ -1,14 +1,13 @@
-import React from "react";
 import Chatheader from "./header/chatheader";
 import Chatbody from "./body/chatbody";
-import ChatInput from "./input/chatinput";
+import InputContainer from "./input/input-container";
 
 const ChatWindow = () => {
   return (
-    <div className="border-2 border-gray-300 rounded-lg shadow-lg flex flex-col h-full w-full bg-white overflow-hidden">
+    <div className="cborder rounded-lg shadow-lg flex flex-col h-full w-full bg-white overflow-hidden">
       <Chatheader />
       <Chatbody />
-      <ChatInput />
+      <InputContainer />
     </div>
   );
 };

@@ -2,7 +2,6 @@
 
 import { ImageUp } from "lucide-react";
 import { useTheme } from "next-themes";
-import React from "react";
 
 const UploadFile = ({
   setImage,
@@ -12,8 +11,9 @@ const UploadFile = ({
   getBase64: (file: File) => void;
 }) => {
   const { theme } = useTheme();
+
   return (
-    <button className=" flex items-center justify-center relative">
+    <button className=" flex items-center justify-center relative overflow-hidden">
       <ImageUp color={theme === "light" ? "black" : "white"} size={38} />
       <input
         type="file"
@@ -22,7 +22,7 @@ const UploadFile = ({
         onChange={(e) => {
           const file = e.target.files?.[0];
           if (file) {
-            console.log(file);
+            console.log("File selected:", file.name);
             setImage(file);
             getBase64(file);
           }

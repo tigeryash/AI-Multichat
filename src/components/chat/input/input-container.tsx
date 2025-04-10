@@ -5,7 +5,7 @@ import PromptInput from "./promptinput";
 import UploadFile from "./uploadfile";
 import ImagePreview from "./image-preview";
 
-const ChatInput = () => {
+const InputContainer = () => {
   const [image, setImage] = useState<File | null>(null);
   const [base64Image, setBase64Image] = useState<string | ArrayBuffer | null>(
     null
@@ -25,12 +25,23 @@ const ChatInput = () => {
       setConvertingImage(false);
     };
   };
+
+  const resetFileInput = () => {
+    const fileInput = document.querySelector(
+      'input[type="file"]'
+    ) as HTMLInputElement;
+    if (fileInput) {
+      fileInput.value = "";
+    }
+    setBase64Image(null);
+  };
   return (
-    <div className="flex flex-col p-4 border-t-2 border-gray-300 dark:bg-black bg-white space-y-2 ">
+    <div className="flex flex-col p-4 border-t-1 cborder-gray dark:bg-black bg-white space-y-2 ">
       <ImagePreview
         image={image}
         setImage={setImage}
         convertingImage={convertingImage}
+        resetFileInput={resetFileInput}
       />
       <div className="flex items-center space-x-4">
         <UploadFile setImage={setImage} getBase64={getBase64} />
@@ -41,4 +52,4 @@ const ChatInput = () => {
   );
 };
 
-export default ChatInput;
+export default InputContainer;

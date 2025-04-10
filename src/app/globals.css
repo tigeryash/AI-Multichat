@@ -121,4 +121,11 @@
   }
 }
 
+.cborder {
+  @apply border-1 border-gray-500/65;
+}
+.cborder-gray {
+  @apply border-gray-500/65;
+}
+
 @plugin 'tailwind-scrollbar';
