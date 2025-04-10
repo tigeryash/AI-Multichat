@@ -8,10 +8,8 @@ const PromptInput = () => {
   const adjustHeight = () => {
     const textarea = textareaRef.current;
     if (!textarea) return;
-
-    // Reset height to auto to get the correct scrollHeight
     textarea.style.height = "0px";
-    const newHeight = Math.min(textarea.scrollHeight, 150); // 288px = 72 * 4 (approx max-h-72)
+    const newHeight = Math.min(textarea.scrollHeight, 150);
     textarea.style.height = `${newHeight}px`;
   };
 
@@ -19,7 +17,6 @@ const PromptInput = () => {
     const textarea = textareaRef.current;
     if (textarea) {
       textarea.addEventListener("input", adjustHeight);
-      // Set initial height
       adjustHeight();
     }
 
@@ -29,6 +26,7 @@ const PromptInput = () => {
       }
     };
   }, []);
+
   return (
     <textarea
       ref={textareaRef}
