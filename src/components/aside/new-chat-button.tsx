@@ -4,7 +4,7 @@ import { Plus } from "lucide-react";
 
 const NewChatbutton = () => {
   return (
-    <Button>
+    <Button className="m-4">
       <Plus />
       New chat
     </Button>

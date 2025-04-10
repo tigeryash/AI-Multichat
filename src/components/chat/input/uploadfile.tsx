@@ -1,5 +1,7 @@
 "use client";
+
 import { ImageUp } from "lucide-react";
+import { useTheme } from "next-themes";
 import React from "react";
 
 const UploadFile = ({
@@ -9,9 +11,10 @@ const UploadFile = ({
   setImage: (file: File | null) => void;
   getBase64: (file: File) => void;
 }) => {
+  const { theme } = useTheme();
   return (
-    <button className=" flex items-center justify-center  relative">
-      <ImageUp color="black" size={38} />
+    <button className=" flex items-center justify-center relative">
+      <ImageUp color={theme === "light" ? "black" : "white"} size={38} />
       <input
         type="file"
         accept="image/*"

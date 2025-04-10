@@ -17,9 +17,10 @@ const ImagePreview = ({
 }: ImagePreviewProps) => {
   return (
     image && (
-      <div className="flex items-center justify-center w-24 h-24 bg-gray-200   relative">
+      <div className="flex items-center justify-center w-24 h-24 bg-transparent  relative">
         <button
-          className="absolute -top-2 -right-2 px-2 flex justify-center items-center text-white bg-black rounded-full hover:bg-gray-800 hover:text-red-500 transition-transform duration-200"
+          className="absolute -top-2 -right-2 px-2 flex justify-center items-center text-white dark:text-black 
+          bg-black dark:bg-white dark:hover:bg-gray-100 rounded-full hover:bg-gray-800 hover:text-red-500 transition-transform duration-200"
           onClick={() => setImage(null)}
         >
           x

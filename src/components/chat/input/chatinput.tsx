@@ -26,7 +26,7 @@ const ChatInput = () => {
     };
   };
   return (
-    <div className="flex flex-col p-4 border-t-2 border-gray-300 bg-white space-y-2 ">
+    <div className="flex flex-col p-4 border-t-2 border-gray-300 dark:bg-black bg-white space-y-2 ">
       <ImagePreview
         image={image}
         setImage={setImage}
